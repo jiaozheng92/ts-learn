@@ -21,6 +21,10 @@ function add(x:number,y:number,z:number = 10):number {
 }
 class Animal {
     name:string;
+    static cata:string[] = ['cat','dog']
+    static isAnimal(item:any){
+        return item instanceof Animal
+    }
     constructor(name:string) {
         this.name = name
     }
@@ -30,4 +34,5 @@ class Animal {
 }
 
 let lily = new Animal('lily')
-console.log(lily.run());
+console.log(Animal.isAnimal(lily));
+// console.log(lily.run());
